@@ -1,5 +1,8 @@
-<link rel="import" href="../../../polymer/lib/elements/custom-style.html">
+import '@polymer/polymer/lib/elements/custom-style';
 
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML =
+`
 <custom-style>
   <style>
     html {
@@ -21,3 +24,5 @@
     }
   </style>
 </custom-style>
+`;
+document.head.appendChild($_documentContainer.content);

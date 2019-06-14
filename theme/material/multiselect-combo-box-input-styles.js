@@ -1,10 +1,11 @@
-<link rel="import" href="../../../vaadin-material-styles/typography.html">
-<link rel="import" href="../../../vaadin-material-styles/color.html">
+import '@vaadin/vaadin-material-styles/typography';
+import '@vaadin/vaadin-material-styles/color';
+import '@vaadin/vaadin-material-styles/mixins/field-button';
+import '@polymer/polymer/lib/elements/custom-style.js';
+import '@polymer/polymer/lib/elements/dom-module.js';
 
-<link rel="import" href="../../../vaadin-material-styles/mixins/field-button.html">
-
-<link rel="import" href="multiselect-combo-box-material.html">
-
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `
 <dom-module id="material-multiselect-combo-box-input" theme-for="multiselect-combo-box-input">
   <template>
     <style include="material-field-button">
@@ -144,3 +145,5 @@
     </style>
   </template>
 </dom-module>
+`;
+document.head.appendChild($_documentContainer.content);

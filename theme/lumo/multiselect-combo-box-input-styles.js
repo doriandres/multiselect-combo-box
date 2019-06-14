@@ -1,11 +1,10 @@
-<link rel="import" href="../../../vaadin-lumo-styles/typography.html">
-<link rel="import" href="../../../vaadin-lumo-styles/style.html">
-
-<link rel="import" href="../../../vaadin-lumo-styles/mixins/field-button.html">
-
-<dom-module id="lumo-multiselect-combo-box-input" theme-for="multiselect-combo-box-input">
-  <template>
-    <style include="lumo-field-button">
+import '@vaadin/vaadin-lumo-styles/typography';
+import '@vaadin/vaadin-lumo-styles/style';
+import '@vaadin/vaadin-lumo-styles/mixins/field-button';
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = 
+`
+  <style include="lumo-field-button">
       :host {
         display: flex;
         border-radius: var(--lumo-border-radius);
@@ -89,6 +88,6 @@
       :host(:not([has-value])) [part="clear-button"] {
         display: none;
       }
-    </style>
-  </template>
-</dom-module>
+  </style>
+`;
+document.head.appendChild($_documentContainer.content);

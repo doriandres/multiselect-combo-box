@@ -1,7 +1,10 @@
-<link rel="import" href="../../../vaadin-material-styles/font-icons.html">
-<link rel="import" href="../../../vaadin-material-styles/mixins/required-field.html">
-<link rel="import" href="../../../vaadin-material-styles/color.html">
-
+import '@vaadin/vaadin-material-styles/font-icons';
+import '@vaadin/vaadin-material-styles/mixins/required-field';
+import '@vaadin/vaadin-material-styles/color';
+import '@polymer/polymer/lib/elements/dom-module';
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML =
+`
 <dom-module id="material-multiselect-combo-box" theme-for="multiselect-combo-box">
   <template>
     <style include="material-required-field">
@@ -159,3 +162,6 @@
       </style>
     </template>
   </dom-module>
+`;
+
+document.head.appendChild($_documentContainer.content);
